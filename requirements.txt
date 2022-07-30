@@ -86,7 +86,7 @@ pyperclip==1.8.2
 PyRect==0.1.4
 pyrsistent==0.17.3
 PyScreeze==0.1.27
-python-dateutil==1.5
+python-dateutil
 PyTweening==1.0.3
 pytz==2019.1
 pywhatkit==4.8
