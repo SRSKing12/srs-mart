@@ -1,0 +1,61 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+
+<div class="container">
+ <div class="row mt-5">
+  <div class="col-sm-6">
+    <h4>Order Summary</h4>
+    <hr>
+    {% for ci in cart_items %}    
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5>Product: {{ci.product.title}}</h5>
+          <p>Quantity: {{ci.quantity}}</p>
+          <p>Price: <span class="fw-bold">Rs. {{ci.total_cost}} </span></p>
+        </div>
+      </div>
+    {% endfor %}
+    <p class="fw-bold">Gross Total(Including Shipping amount of Rs.{{shipping_amount}}) = Rs. {{total_amount}}</p>
+    <small>Terms and Conditions: Once the order is placed, you can't cancel it. Delivery time will differ from city & states. If there is too much load, your order may be delayed. We apologize for any inconvinence.</small>
+  </div>
+  <div class="col-sm-4 offset-sm-1">
+    <h4>Select Shipping Address</h4>
+    <hr>
+    <form action="/paymentdone/">
+      {% for a in addr %}
+      <div class="card">
+        <div class="card-body">
+        <h5>{{a.name}}</h5>
+        <p>{{a.locality}} {{a.city}}, {{a.state}} - {{a.zipcode}}</p>
+        </div>
+      </div>
+        <div class="form-check mt-2 mb-5">
+          <input onclick="check_ip()" class="form-check-input" name="custid" id="custid{{forloop.counter}}" type="radio" value="{{a.id}}">
+          <label class="form-check-label fw-bold" for="">
+            Address: {{forloop.counter}} </label>
+        </div>
+      {% endfor %}
+        <div class="text-end">
+          <button type="submit" id="chkout" class="btn btn-warning mt-3 px-5 fw-bold disabled">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}
+
+{% block payment-gateway %}
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="{{rp_id}}"
+    data-amount="{{tot_amt}}"
+    data-currency="INR"
+    data-order_id="{{payment.id}}"
+    data-name="SRS-Mart"
+    data-description="Buy Now"
+    data-image="https://i.postimg.cc/mgNX9ccr/SRS-Mart.jpg"
+    data-theme.color="#ff8512"
+></script>
+{% endblock payment-gateway %}

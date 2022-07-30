@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.hvr:hover{
+    background-image: linear-gradient(to bottom right, #a4508b 0%, #5f0a87 74%) !important;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.dropdown-item:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+/* Disable Number Input Arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}

@@ -1,0 +1,8 @@
+Thank you for registering with SRS-Mart !
+We need to verify your email before you continue.
+
+
+You are almost there, {{ user.username }}!
+Please click <a href="{{ link }}">here</a> to confirm your account
+
+The token expires on {{ expiry|time:"TIME_FORMAT" }}

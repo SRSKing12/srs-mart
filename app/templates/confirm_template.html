@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link rel="shortcut icon" href="../../app/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../app/static/app/css/my-style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-image: url("https://cdn.pixabay.com/photo/2014/04/04/14/55/gold-313346__340.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            overflow-y: hidden;
+            flex-direction: column;
+        }
+
+        .btn{
+            height: 3rem;
+            width: 8rem;
+            border-radius: 1rem;
+            font-size: 1em;
+            background-color: rgb(192, 0, 250);
+            color: white;
+        }
+
+        .btn:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+{% if success %}
+<h1 style="color: rgb(107, 0, 139);">{{ user.username }}, your account is verified! </h1>
+<a href="{% url 'login' %}"><button class="hvr btn">Login</button></a>
+{% else %}
+<br>
+<h1 style="color: red;"> Error, invalid token! </h1>
+{% endif %}
+</body>
+</html>
