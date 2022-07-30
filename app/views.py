@@ -241,11 +241,15 @@ class CustomerRegistrationView(View):
 
     def post(self, request):
         form = CustomerRegistrationForm(request.POST)
+        msg = None
         if form.is_valid():
-            user = form.save()
-            send_email(user)
-            return redirect('email_sent')
-        return render(request, 'app/customerregistration.html', {'form':form})
+            if User.objects.filter(email=form.cleaned_data.get('email')).exists():
+                msg = "This Email already exists!"
+            else:
+                user = form.save()
+                send_email(user)
+                return redirect('email_sent')
+        return render(request, 'app/customerregistration.html', {'form':form, 'msg':msg})
 
 @login_required
 def checkout(request):
