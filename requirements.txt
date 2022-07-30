@@ -40,7 +40,6 @@ djangorestframework==3.11.2
 entrypoints==0.3
 goto-statement==1.2
 gunicorn==20.0.4
-heroku
 hyperlink==20.0.1
 idna==2.8
 incremental==17.5.0
