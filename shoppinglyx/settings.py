@@ -137,7 +137,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'srs.mart.12@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 
 # Email Verify
 def verified_callback(user):
@@ -157,7 +157,7 @@ APPEND_SLASH=False
 LOGIN_REDIRECT_URL = '/profile/'
 
 # env variables
-RAZORPAY_ID = os.environ.get("RAZORPAY_ID")
-RAZORPAY_SECRET_KEY = os.environ.get("RAZORPAY_SECRET_KEY")
+RAZORPAY_ID = os.getenv("RAZORPAY_ID")
+RAZORPAY_SECRET_KEY = os.getenv("RAZORPAY_SECRET_KEY")
 
 django_heroku.settings(locals())
