@@ -52,12 +52,6 @@ jedi==0.18.0
 Jinja2==2.11.3
 joblib==1.0.1
 jsonschema==3.2.0
-jupyter==1.0.0
-jupyter-console==6.4.0
-jupyter-core
-jupyter-client
-jupyterlab-pygments==0.1.2
-jupyterlab-widgets==1.0.0
 kiwisolver==1.3.1
 lazy-object-proxy==1.5.2
 MarkupSafe==1.1.1
@@ -66,12 +60,6 @@ mistune==0.8.4
 MouseInfo==0.1.3
 mypy-extensions==0.4.3
 mysql-connector-python==8.0.28
-nbclient
-nbconvert==6.0.7
-nbformat
-nest-asyncio
-notebook
-numpy==1.20.1
 oauthlib==3.1.1
 packaging==20.9
 pandocfilters==1.4.3
@@ -105,7 +93,6 @@ pytz==2019.1
 pywhatkit==4.8
 pywinpty==0.5.7
 pyzmq==22.0.3
-qtconsole
 QtPy==1.9.0
 razorpay==1.3.0
 regex==2020.11.13
