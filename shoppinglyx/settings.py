@@ -159,5 +159,6 @@ LOGIN_REDIRECT_URL = '/profile/'
 # env variables
 RAZORPAY_ID = os.getenv("RAZORPAY_ID")
 RAZORPAY_SECRET_KEY = os.getenv("RAZORPAY_SECRET_KEY")
+ADMIN_URL = os.getenv("ADMIN_URL")
 
 django_heroku.settings(locals())
