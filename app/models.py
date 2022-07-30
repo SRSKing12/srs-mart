@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+User._meta.get_field('email')._unique = True
+
 STATE_CHOICES = (
     ("Andhra Pradesh", "Andhra Pradesh"),
     ("Arunachal Pradesh ", "Arunachal Pradesh "), 
