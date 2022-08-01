@@ -290,3 +290,12 @@ def payment_done(request):
 
 def email_sent(request):
     return render(request, 'app/email_sent.html')
+
+def privacy_policy(request):
+    return render(request, 'app/privacy_policy.html')
+
+def refund_policy(request):
+    return render(request, 'app/refund_policy.html')
+
+def t_and_c(request):
+    return render(request, 'app/t_and_c.html')
