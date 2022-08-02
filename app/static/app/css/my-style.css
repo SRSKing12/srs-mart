@@ -21,3 +21,11 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
+
+.tj{
+    text-align: justify !important;
+}
+
+.pdlr{
+    padding: 0 2em;
+}
