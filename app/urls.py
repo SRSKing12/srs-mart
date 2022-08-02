@@ -40,4 +40,6 @@ urlpatterns = [
     path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
     path('refund_policy/', views.refund_policy, name='refund_policy'),
     path('t_and_c/', views.t_and_c, name='t_and_c'),
+    path('contact/', views.contact_us, name='contact_us'),
+    path('about/', views.about_us, name='about_us'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
