@@ -299,3 +299,9 @@ def refund_policy(request):
 
 def t_and_c(request):
     return render(request, 'app/t_and_c.html')
+
+def contact_us(request):
+    return render(request, 'app/contact.html')
+
+def about_us(request):
+    return render(request, 'app/about.html')
